@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;600&display=swap');
+
+body {
+    background-image: url('assets/cartoon-flat-style-white-clouds-on-pink-vector.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Quicksand', sans-serif;
+    color: #5a3e36;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 240, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Agora a Hello Kitty e a música ficam no topo */
+.imagem-musica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px; /* Distância do texto */
+}
+
+.gif {
+    width: 120px;
+}
+
+/* Estilização do texto */
+.texto h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+}
+
+.texto p {
+    font-size: 18px;
+}
+
+/* Estilização dos botões */
+.botoes {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    background-color: #ff69b4; /* Rosa pink */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ff1493; /* Rosa mais escuro ao passar o mouse */
+}
+
+/* Hello Kitty no final */
+.hello-bottom {
+    margin-top: 20px;
+}
+
+.hello-bottom img {
+    width: 120px;
+    display: block;
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .texto h1 {
+        font-size: 26px;
+    }
+
+    .texto p {
+        font-size: 16px;
+    }
+
+    .gif {
+        width: 100px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .hello-bottom img {
+        width: 100px;
+    }
+}
+@keyframes crescer {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.flor {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    animation: crescer 5s ease-in-out;
+}
+body {
+    background-image: url('assets/cartoon-flat-style-white-clouds-on-pink-vector.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Fundo sem imagem na página 2 */
+body.pagina2 {
+    background: none;
+    background-color: #ffebf0; /* Cor clarinha */
+}
+
+/* Animação da flor */
+@keyframes crescer {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.flor {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    animation: crescer 5s ease-in-out;
+}
