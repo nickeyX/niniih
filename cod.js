@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (botaoSim) {
         botaoSim.addEventListener("click", function() {
-            alert("Quer viver uma vida feliz ao meu lado? 💖");
+            window.location.href = "sim.html"; // Troque pelo nome da sua página
         });
     }
 
@@ -21,10 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     if (botaoNao) {
-        // Para computadores (mouse)
         botaoNao.addEventListener("mouseover", moverBotao);
-
-        // Para celulares (toque)
         botaoNao.addEventListener("touchstart", (event) => {
             event.preventDefault();
             moverBotao();
