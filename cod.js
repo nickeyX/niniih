@@ -1,11 +1,8 @@
 const botaoNao = document.getElementById("botao-nao");
 
 function moverBotao() {
-    const larguraJanela = window.innerWidth - botaoNao.offsetWidth;
-    const alturaJanela = window.innerHeight - botaoNao.offsetHeight;
-
-    const x = Math.random() * larguraJanela;
-    const y = Math.random() * alturaJanela;
+    const x = Math.random() * (window.innerWidth - botaoNao.clientWidth);
+    const y = Math.random() * (window.innerHeight - botaoNao.clientHeight);
 
     botaoNao.style.position = "absolute";
     botaoNao.style.left = `${x}px`;
@@ -16,8 +13,4 @@ function moverBotao() {
 botaoNao.addEventListener("mouseover", moverBotao);
 
 // Para celulares (toque)
-botaoNao.addEventListener("touchstart", (event) => {
-    event.preventDefault(); // Evita comportamento estranho no toque
-    moverBotao();
-});
-
+botaoNao.addEventListener("touchstart", moverBotao);
